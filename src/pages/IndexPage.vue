@@ -196,7 +196,7 @@ export default {
       this.fileName = file.name;
       this.uploadCompleted = false;
       this.upload = new tus.Upload(file, {
-        endpoint: 'http://172.17.0.4:1080/files',
+        endpoint: 'https://tusd.alma.antiglitch.co:443/files',
         retryDelays: [0, 1000, 3000, 5000],
         metadata: {
           filename: file.name,

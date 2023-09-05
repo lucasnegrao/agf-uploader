@@ -196,7 +196,7 @@ export default {
       this.fileName = file.name;
       this.uploadCompleted = false;
       this.upload = new tus.Upload(file, {
-        endpoint: 'http://tusd.alma.antiglitch.co/files',
+        endpoint: 'https://tusd.alma.antiglitch.co/files',
         retryDelays: [0, 1000, 3000, 5000],
         parallelUploads: 10,
         chunkSize: 524288000,

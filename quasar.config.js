@@ -82,10 +82,12 @@ module.exports = configure(function (/* ctx */) {
       // https: true
       host: '0.0.0.0',
       origin: 'https://upload.antiglitch.co',
+      strictPort: true,
       hmr: {
         host: 'upload.antiglitch.co',
-        port: 443,
+        port: 4431,
         protocol: 'wss',
+        clientPort: 443,
       },
       port: 9000,
       open: false, // opens browser window automatically

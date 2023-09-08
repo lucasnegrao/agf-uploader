@@ -84,8 +84,6 @@ module.exports = configure(function (/* ctx */) {
       origin: 'https://upload.antiglitch.co',
       strictPort: true,
       hmr: {
-        host: 'upload.antiglitch.co',
-        port: 4431,
         protocol: 'wss',
         clientPort: 443,
       },

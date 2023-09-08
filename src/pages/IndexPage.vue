@@ -199,7 +199,7 @@ export default {
         endpoint: 'https://tusd.alma.antiglitch.co/files',
         retryDelays: [0, 1000, 3000, 5000],
         parallelUploads: 10,
-        chunkSize: 524288000,
+        chunkSize: 5242880,
         metadata: {
           filename: file.name,
           filetype: file.type,

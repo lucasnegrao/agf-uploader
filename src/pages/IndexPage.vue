@@ -252,10 +252,10 @@ function formatTime(time) {
   if (seconds < 60) {
     return `${seconds.toFixed(0)} ${seconds != 1 ? 'seconds' : 'second'}`;
   } else if (minutes < 60) {
-    const remainingSeconds = seconds - minutes * 60;
+    // const remainingSeconds = seconds - minutes * 60;
     return `${minutes} ${minutes != 1 ? 'minutes' : 'minute'}`;
   } else if (hours < 24) {
-    const remainingMinutes = minutes - hours * 60;
+    // const remainingMinutes = minutes - hours * 60;
     return `${hours} ${hours != 1 ? 'hours' : 'hour'}`;
   } else if (days < 7) {
     const remainingHours = hours - days * 24;

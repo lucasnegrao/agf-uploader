@@ -80,6 +80,14 @@ module.exports = configure(function (/* ctx */) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
       // https: true
+      host: '0.0.0.0',
+      origin: 'https://upload.antiglitch.co',
+      hmr: {
+        host: 'upload.antiglitch.co',
+        port: 443,
+        protocol: 'wss',
+      },
+      port: 9000,
       open: false, // opens browser window automatically
     },
 

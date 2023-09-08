@@ -6,7 +6,20 @@ services:
       context: .
       target: 'develop-stage'
     ports:
-      - '8080:8080'
+      - '9000:9020'
     volumes:
       - '/root/agf-uploader:/app'
     command: /bin/sh -c "yarn && quasar dev"
+    networks:
+      - headscale_default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.upload.rule=Host(`upload.antiglitch.co`)"
+      - "traefik.http.routers.upload.entrypoints=websecure,web,wss"
+      - "traefik.http.routers.upload.tls.certresolver=myresolver"
+      - "traefik.http.services.upload.loadbalancer.server.port=9000"
+
+networks:
+   headscale_default:
+      name: headscale_default
+      external: true

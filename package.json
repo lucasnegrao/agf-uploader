@@ -19,7 +19,6 @@
     "quasar": "^2.6.0",
     "ts-node": "^10.9.1",
     "tus-js-client": "^3.1.0",
-    "uppy": "^3.5.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0",
     "vue-upload-component": "^3.1.8"
